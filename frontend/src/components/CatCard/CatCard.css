@@ -1,0 +1,42 @@
+.cats-grid {
+  display: grid;
+  grid-template-columns: 586px 586px 586px;
+  height: 100%;
+  margin-top: 60px;
+  gap: 100px 30px;
+  width: 1920px;
+}
+
+.square{
+    background-color: rgba(216, 228, 235, 0.7);
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px); 
+    border-radius: 5px;
+    border-radius: 5px;
+    z-index: 2;
+    height: 500px;
+    width: 586px;
+}
+
+.card-content3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cat-card-image img {
+    object-fit: cover;
+}
+
+.cat-card-link {
+    text-decoration: none;  
+    color: inherit;          
+    display: block;
+}
+
+.cat-card-name{
+     font-size: 30px; 
+  font-family: 'Muller', sans-serif;
+  font-weight: 300;
+}

@@ -1,0 +1,67 @@
+.filter-panel{
+    height: 120px;
+    max-width: 1920px;
+    font-family: 'Muller', sans-serif;
+    background-color: rgba(251, 253, 255, 1);
+}
+
+/* src/components/FilterPanel/FilterPanel.css */
+
+
+
+.filter-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 50px;
+}
+
+.filter-group {
+    min-width: 200px;
+    margin-right: 20px;
+}
+
+.filter-select {
+    width: 100%;
+    padding: 14px 18px;
+    font-family: 'Muller', sans-serif;
+    font-size: 38px;
+    border: none;
+    font-weight: 400;
+    color: #2C3E50;
+    cursor: pointer ;
+    
+    
+}
+
+
+.filter-select option {
+    font-family: 'Muller', sans-serif;
+    padding: 12px;
+    background-color: rgba(216, 228, 235, 0.7);
+  backdrop-filter: blur(5px); 
+  -webkit-backdrop-filter: blur(5px); 
+}
+
+
+
+.reset-btn {
+    background-color: #2B6183;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 30px;
+    font-weight: 300;
+    width: 372px;
+    height: 54px;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-left: 20px;
+}
+
+
+
+
+
+
