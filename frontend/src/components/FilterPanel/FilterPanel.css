@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+
 .filter-panel{
     height: 120px;
     max-width: 1920px;
-    font-family: 'Muller', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: rgba(251, 253, 255, 1);
 }
 
@@ -20,28 +23,28 @@
 .filter-group {
     min-width: 200px;
     margin-right: 20px;
+    background-color: rgba(251, 253, 255, 1);
 }
 
 .filter-select {
     width: 100%;
     padding: 14px 18px;
-    font-family: 'Muller', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 38px;
     border: none;
     font-weight: 400;
     color: #2C3E50;
     cursor: pointer ;
-    
+    background-color: rgba(251, 253, 255, 1);
     
 }
 
 
 .filter-select option {
-    font-family: 'Muller', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     padding: 12px;
     background-color: rgba(216, 228, 235, 0.7);
-  backdrop-filter: blur(5px); 
-  -webkit-backdrop-filter: blur(5px); 
+    backdrop-filter: blur(5px);  
 }
 
 

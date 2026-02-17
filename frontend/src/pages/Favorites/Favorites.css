@@ -1,0 +1,94 @@
+/* src/pages/Favorites/Favorites.css */
+.favorites-page {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Muller', sans-serif;
+}
+
+.favorites-page h1 {
+    text-align: center;
+    color: #2C3E50;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+
+
+.favorites-count {
+    text-align: right;
+    color: #6B7A8F;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 586px);
+    gap: 53px;
+    justify-content: center;
+}
+
+.favorites-empty {
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.favorites-empty p {
+    color: #6B7A8F;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.favorites-empty p:first-of-type {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.to-catalog-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #2B6183;
+    color: white;
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.back-home {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #2C3E50;
+    color: white;
+    text-decoration: none;
+    border-radius: 40px;
+    margin-top: 20px;
+}
+
+.favorites-loading {
+    text-align: center;
+    padding: 60px;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #667EEA;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+

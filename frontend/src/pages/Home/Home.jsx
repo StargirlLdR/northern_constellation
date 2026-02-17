@@ -139,13 +139,13 @@ const Home = () => {
                 </div>
 
                 <div className="cat-card">
-                <div className="card-content2">
-                    <img 
-                    src={catImage3} 
-                    alt="Кошка" 
-                    className="catImage-photo"
-                    />
-                </div>
+                  <div className="card-content2">
+                      <img 
+                      src={catImage3} 
+                      alt="Кошка" 
+                      className="catImage-photo"
+                      />
+                  </div>
                 </div>
 
                     

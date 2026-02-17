@@ -2,17 +2,21 @@
   background-color: rgba(251, 253, 255, 1);
   width: 1920px;
 }
+
 .container {
   flex: 1; 
 }
+
 .app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
 footer {
   margin-top: auto; 
 }
+
 @font-face {
   font-family: 'Muller';
   src: url('./fonts/Muller-Trial-Regular.ttf') format('truetype');
@@ -20,13 +24,15 @@ footer {
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Muller';
-  src: url('./fonts/MullerMuller-Trial-Medium.ttf') format('truetype');
+  src: url('./fonts/Muller-Trial-Medium.ttf') format('truetype'); /* ИСПРАВЛЕНО */
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
+  
 @font-face {
   font-family: 'Muller';
   src: url('./fonts/Muller-Trial-Light.ttf') format('truetype');

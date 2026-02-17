@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 .header {
   background-color: rgba(251, 253, 255, 1);
   margin-top: 39px;
@@ -25,6 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-left: -150px;
 }
 
 .header__link {
@@ -33,7 +35,6 @@
   font-size: 30px;
   transition: color 0.3s ease;
   white-space: nowrap;
-  
 }
 
 .header__link:hover {
@@ -56,5 +57,188 @@
   z-index: 2;
 }
 
+/* ========== НОВЫЕ СТИЛИ (добавлены) ========== */
 
+/* Иконка избранного */
+.favorite-icon-link {
+  color: #092436;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 103;
+  padding: 5px;
+  margin-right: 15px;
+}
+
+.favorite-icon-link:hover {
+  color: #E74C3C;
+  transform: scale(1.1);
+}
+
+.favorite-icon-link svg {
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+
+/* Контейнер для меню пользователя */
+.user-menu-container {
+  position: relative;
+  display: inline-block;
+  z-index: 105;
+}
+
+/* Кнопка пользователя */
+.user-icon-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #092436;
+  padding: 5px 10px;
+  border-radius: 40px;
+  transition: all 0.3s;
+  font-family: 'Muller', sans-serif;
+  position: relative;
+  z-index: 106;
+  font-size: 24px;
+}
+
+.user-icon-button:hover {
+  background: rgba(43, 97, 131, 0.1);
+}
+
+.user-icon-button svg {
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+
+.user-name {
+  font-size: 24px;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: none;
+  color: #092436;
+}
+
+/* Выпадающее меню */
+.user-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  min-width: 250px;
+  z-index: 1000;
+  overflow: hidden;
+  animation: slideDown 0.2s ease;
+  border: 1px solid rgba(43, 97, 131, 0.2);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.user-menu-info {
+  padding: 15px;
+  background: #f8f9fa;
+  border-bottom: 1px solid rgba(43, 97, 131, 0.1);
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+.user-menu-info strong {
+  display: block;
+  color: #092436;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.user-menu-info span {
+  display: block;
+  color: #6B7A8F;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.user-menu-item {
+  display: block;
+  width: 100%;
+  padding: 15px 15px;
+  text-decoration: none;
+  color: #092436;
+  transition: background 0.3s;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.user-menu-item:hover {
+  background: rgba(43, 97, 131, 0.1);
+}
+
+.user-menu-item.logout {
+  color: #E74C3C;
+  border-top: 1px solid rgba(43, 97, 131, 0.1);
+  width: 100%;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.user-menu-item.logout:hover {
+  background: rgba(231, 76, 60, 0.1);
+}
+
+
+.auth-icon-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #092436;
+  padding: 5px 10px;
+  border-radius: 40px;
+  transition: all 0.3s;
+  font-family: 'Montserrat', sans-serif;
+  z-index: 103;
+  font-size: 24px;
+}
+
+.auth-icon-button:hover {
+  background: rgba(43, 97, 131, 0.1);
+}
+
+.auth-icon-button svg {
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+
+.auth-text {
+  font-size: 24px;
+  pointer-events: none;
+}
 
