@@ -15,11 +15,10 @@ export const useFilters = () => {
         ageGroup: 'all'
     });
 
-    // Загружаем цвета при монтировании
     useEffect(() => {
         const loadColors = async () => {
             try {
-                console.log('🎨 Загружаем цвета...');
+                console.log('Загружаем цвета...');
                 const colorsData = await fetchColors();
                 console.log('Загруженные цвета:', colorsData);
                 setColors(colorsData);
@@ -30,7 +29,6 @@ export const useFilters = () => {
         loadColors();
     }, []);
 
-    // Загружаем котят с фильтрами
     const loadKittens = useCallback(async () => {
         setLoading(true);
         setError(null);
@@ -48,13 +46,12 @@ export const useFilters = () => {
         }
     }, [filters]);
 
-    // Загружаем при изменении фильтров
     useEffect(() => {
         loadKittens();
     }, [loadKittens]);
 
     const updateFilter = (key, value) => {
-        console.log(`🔧 Фильтр изменен: ${key} = ${value}`);
+        console.log(`Фильтр изменен: ${key} = ${value}`);
         setFilters(prev => ({ ...prev, [key]: value }));
     };
 
