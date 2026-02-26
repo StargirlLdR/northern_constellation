@@ -4,7 +4,7 @@ const Kitten = require('../models/Kitten');
 exports.getAllKittens = async (req, res) => {
     try {
         const filters = {
-            status: req.query.status,    // НОВЫЙ фильтр
+            status: req.query.status,    
             gender: req.query.gender,
             color: req.query.color,
             ageGroup: req.query.ageGroup

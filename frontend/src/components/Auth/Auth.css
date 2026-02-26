@@ -66,6 +66,16 @@
     font-weight: 400;
 }
 
+.form-group label::after {
+    content: ' *';
+    color: #E74C3C;
+    font-weight: bold;
+}
+
+.form-group:has(input[name="phone"]) label::after {
+    content: '';
+}
+
 .form-group input {
     width: 100%;
     padding: 12px;
@@ -79,7 +89,20 @@
 .form-group input:focus {
     outline: none;
     border-color: #667EEA;
+}
 
+.form-group input.error {
+    border-color: #E74C3C;
+    background-color: #FEF5F5;
+}
+
+.field-error {
+    display: block;
+    color: #E74C3C;
+    font-size: 12px;
+    margin-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 
 .auth-error {
@@ -90,6 +113,14 @@
     margin-bottom: 20px;
     text-align: center;
     font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.server-error {
+    background-color: #FEF5F5;
+    border-left: 4px solid #E74C3C;
+    text-align: left;
+    font-weight: 500;
 }
 
 .auth-form button[type="submit"] {
@@ -101,14 +132,18 @@
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: background 0.3s;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
 }
 
-
+.auth-form button[type="submit"]:hover:not(:disabled) {
+    background: #1d4a6b;
+}
 
 .auth-form button[type="submit"]:disabled {
-    opacity: 0.7;
+    opacity: 0.6;
     cursor: not-allowed;
 }
 
@@ -116,6 +151,8 @@
     text-align: center;
     margin-top: 20px;
     color: #6B7A8F;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
 }
 
 .switch-btn {
@@ -123,8 +160,13 @@
     border: none;
     color: #667EEA;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 500;
     text-decoration: underline;
     font-family: 'Montserrat', sans-serif;
+}
+
+.switch-btn:hover {
+    color: #2B6183;
 }
 

@@ -1,4 +1,4 @@
-// src/components/CatCard/CatCard.jsx
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
@@ -19,24 +19,32 @@ const CatCard = ({ kitten }) => {
         }
     }, [kitten.kitten_id, isAuthenticated, checkIsFavorite]);
 
-    const getImageUrl = () => {
-        if (imageError) {
-            return 'http://localhost:3001/assets/kittens/placeholder.png';
+    // Функция для получения базового URL бэкенда
+    const getBaseUrl = () => {
+        const hostname = window.location.hostname;
+        if (hostname === 'localhost' || hostname === '127.0.0.1') {
+            return 'http://localhost:3001';
         }
+        return `http://${hostname}:3001`;
+    };
+
+    const getImageUrl = () => {
+        const baseUrl = getBaseUrl();
         
-        if (!kitten.main_photo) {
-            return 'http://localhost:3001/assets/kittens/placeholder.png';
+        if (imageError || !kitten.main_photo) {
+            return `${baseUrl}/assets/kittens/placeholder.png`;
         }
         
         if (kitten.main_photo.startsWith('http')) {
             return kitten.main_photo;
         }
-        
-        if (kitten.main_photo.startsWith('/')) {
-            return `http://localhost:3001${kitten.main_photo}`;
+     
+        let photoPath = kitten.main_photo;
+        if (photoPath.startsWith('/')) {
+            photoPath = photoPath.substring(1);
         }
         
-        return `http://localhost:3001/assets/kittens/${kitten.main_photo}`;
+        return `${baseUrl}/${photoPath}`;
     };
 
     const handleFavoriteClick = async (e) => {
@@ -78,7 +86,7 @@ const CatCard = ({ kitten }) => {
                                     alt={kitten.name}
                                     loading="lazy"
                                     onError={() => {
-                                        console.log('Ошибка загрузки фото для:', kitten.name);
+                                        console.log(' Ошибка загрузки фото для:', kitten.name);
                                         setImageError(true);
                                     }}
                                 />
@@ -102,11 +110,9 @@ const CatCard = ({ kitten }) => {
                 </div>
             </Link>
 
-            {/* Кастомное уведомление для неавторизованных */}
             {showAuthMessage && (
                 <div className="auth-notification">
                     <div className="notification-content">
-                        <span className="notification-icon"></span>
                         <span className="notification-text">Войдите, чтобы добавить в избранное</span>
                     </div>
                 </div>

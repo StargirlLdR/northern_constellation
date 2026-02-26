@@ -16,30 +16,28 @@ class Kitten {
         
         const values = [];
         let paramCount = 1;
-        
-        // НОВЫЙ ФИЛЬТР ПО СТАТУСУ
+        //Статус
         if (filters.status && filters.status !== 'all') {
             query += ` AND k.status = $${paramCount}`;
             values.push(filters.status);
             paramCount++;
         }
         
-        // ФИЛЬТР ПО ПОЛУ
+        //Пол
         if (filters.gender && filters.gender !== 'all') {
             query += ` AND k.gender = $${paramCount}`;
             values.push(filters.gender === 'male' ? 'м' : 'ж');
             paramCount++;
         }
         
-        // ИСПРАВЛЕННЫЙ ФИЛЬТР ПО ОКРАСУ
+        //Окрас
         if (filters.color && filters.color !== 'all') {
-            // Убеждаемся, что цвет точно совпадает с названием в БД
-            query += ` AND c.color_name ILIKE $${paramCount}`; // ILIKE для регистронезависимого поиска
+            query += ` AND c.color_name ILIKE $${paramCount}`; 
             values.push(filters.color);
             paramCount++;
         }
         
-        // ФИЛЬТР ПО ВОЗРАСТУ
+        //Возраст
         if (filters.ageGroup && filters.ageGroup !== 'all') {
             switch(filters.ageGroup) {
                 case 'kittens':
@@ -59,7 +57,7 @@ class Kitten {
             }
         }
         
-        // СОРТИРОВКА: сначала доступные, потом забронированные, потом нашедшие дом
+        // 
         query += ` ORDER BY 
             CASE k.status
                 WHEN 'доступен' THEN 1

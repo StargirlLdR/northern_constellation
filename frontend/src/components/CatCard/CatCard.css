@@ -41,7 +41,6 @@
   font-weight: 300;
 }
 
- /* Новые стили для уведомления - тосты как в современных приложениях */
 .custom-toast {
     position: fixed;
     bottom: 30px;
@@ -106,7 +105,6 @@
     }
 }
 
-/* Добавьте в конец CatCard.css */
 
 .auth-notification {
     position: fixed;
@@ -149,7 +147,6 @@
     display: none;
 }
 
-/* Кнопка закрытия (опционально) */
 .notification-close {
     position: absolute;
     top: 15px;

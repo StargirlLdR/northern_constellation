@@ -1,4 +1,4 @@
-// src/pages/Cats/Cats.jsx
+
 import React from 'react';
 import CatCard from '../../components/CatCard/CatCard';
 import FilterPanel from '../../components/FilterPanel/FilterPanel';

@@ -1,4 +1,3 @@
-/* pages/KittenDetail/KittenDetail.css */
 
 .kitten-detail-page {
     max-width: 1920px;
@@ -7,7 +6,6 @@
     background-color: rgba(251, 253, 255, 1);
 }
 
-/* Заголовок - имя питомца */
 .kitten-name-title {
     font-size: 120px;
     color: #092436;
@@ -23,7 +21,7 @@
     align-items: start;
 }
 
-/* Левая колонка с фото */
+
 .kitten-photo {
     width: 100%;
 }
@@ -47,7 +45,6 @@
     font-size: 24px;
 }
 
-/* Правая колонка */
 .kitten-info {
     padding-top: 0;
     display: flex;
@@ -101,9 +98,6 @@
   color: white;
 }
 
-
-
-/* Кнопка назад */
 .back-button {
     display: inline-block;
     color: #092436;

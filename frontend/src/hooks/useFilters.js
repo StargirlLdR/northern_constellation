@@ -1,4 +1,4 @@
-// hooks/useFilters.js
+
 import { useState, useEffect, useCallback } from 'react';
 import { fetchKittens, fetchColors } from '../utils/api';
 
@@ -9,7 +9,7 @@ export const useFilters = () => {
     const [error, setError] = useState(null);
     
     const [filters, setFilters] = useState({
-        status: 'all',      // НОВЫЙ фильтр (по умолчанию показываем всех)
+        status: 'all',      
         gender: 'all',
         color: 'all',
         ageGroup: 'all'
@@ -21,10 +21,10 @@ export const useFilters = () => {
             try {
                 console.log('🎨 Загружаем цвета...');
                 const colorsData = await fetchColors();
-                console.log('✅ Загруженные цвета:', colorsData);
+                console.log('Загруженные цвета:', colorsData);
                 setColors(colorsData);
             } catch (error) {
-                console.error('❌ Ошибка загрузки цветов:', error);
+                console.error('Ошибка загрузки цветов:', error);
             }
         };
         loadColors();
@@ -36,12 +36,12 @@ export const useFilters = () => {
         setError(null);
         
         try {
-            console.log('📡 Загружаем котят с фильтрами:', filters);
+            console.log('Загружаем котят с фильтрами:', filters);
             const data = await fetchKittens(filters);
-            console.log('✅ Загружено котят:', data.length);
+            console.log('Загружено котят:', data.length);
             setKittens(data);
         } catch (error) {
-            console.error('❌ Ошибка загрузки котят:', error);
+            console.error('Ошибка загрузки котят:', error);
             setError(error.message);
         } finally {
             setLoading(false);
@@ -59,7 +59,7 @@ export const useFilters = () => {
     };
 
     const resetFilters = () => {
-        console.log('🔄 Сброс фильтров');
+        console.log('Сброс фильтров');
         setFilters({
             status: 'all',
             gender: 'all',

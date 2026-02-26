@@ -1,4 +1,4 @@
-// src/context/FavoriteContext.jsx
+
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import { useAuth } from './AuthContext';
 
@@ -17,7 +17,6 @@ export const FavoriteProvider = ({ children }) => {
     const [loading, setLoading] = useState(false);
     const { token, isAuthenticated } = useAuth();
 
-    // Загружаем избранное при авторизации
     useEffect(() => {
         if (isAuthenticated && token) {
             loadFavorites();
@@ -59,7 +58,7 @@ export const FavoriteProvider = ({ children }) => {
             const data = await response.json();
             
             if (data.success) {
-                await loadFavorites(); // Перезагружаем список
+                await loadFavorites(); 
                 return { success: true };
             }
             return { success: false };
@@ -81,7 +80,7 @@ export const FavoriteProvider = ({ children }) => {
             const data = await response.json();
             
             if (data.success) {
-                await loadFavorites(); // Перезагружаем список
+                await loadFavorites();
                 return { success: true };
             }
             return { success: false };

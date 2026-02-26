@@ -11,18 +11,17 @@ const Header = () => {
     const [showUserMenu, setShowUserMenu] = useState(false);
 
     const handleLogout = () => {
-        console.log('🔄 Нажата кнопка выхода');
-        console.log('👤 Текущий пользователь:', user);
+        console.log('Нажата кнопка выхода');
+        console.log('Текущий пользователь:', user);
         
         try {
             logout();
-            console.log('✅ Выход выполнен успешно');
+            console.log('Выход выполнен успешно');
             setShowUserMenu(false);
             
-            // Перенаправляем на главную
             window.location.href = '/';
         } catch (error) {
-            console.error('❌ Ошибка при выходе:', error);
+            console.error('Ошибка при выходе:', error);
         }
     };
 

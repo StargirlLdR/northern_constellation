@@ -20,7 +20,7 @@ const FilterPanel = ({ filters, colors, onFilterChange, onReset, hasActiveFilter
         <div className="filter-panel">
 
             <div className="filter-content">
-                {/* НОВЫЙ ФИЛЬТР ПО СТАТУСУ 
+                {/* фильтр по статусу 
                 <div className="filter-group">
                     <select 
                         value={filters.status} 
@@ -85,8 +85,6 @@ const FilterPanel = ({ filters, colors, onFilterChange, onReset, hasActiveFilter
                 </div>
 
                 
-
-                {/* Кнопка сброса */}
                <button className="reset-btn" onClick={onReset}>
                     Сбросить фильтры
                 </button>
